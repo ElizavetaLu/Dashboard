@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap');
+
+$mainBgcolor: #F4F7FE;
+$secondText: #A3AED0;
+$mainText: #1B2559;
+
+@mixin grayFont() {
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondText;
+}
+
+@mixin h1_font($color) {
+    font-size: 34px;
+    font-weight: 700;
+    color: $color;
+}
+
+@mixin h2_font ($color) {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color;
+}
+
+@mixin blue_buttons() {
+    background-color: #4318FF;
+    border-radius: 70px;
+    color: #fff;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+}
+
+@mixin Amount($color, $background) {
+    border-radius: 10px;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0px 7px;
+    background: $background;
+    height: 26px;
+    
+}
+
+@mixin square_block ($align_items) {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 350px;
+    height: 345px;
+    box-sizing: border-box;
+    padding: 20px;
+    align-items: $align_items;
+}

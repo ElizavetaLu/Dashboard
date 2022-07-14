@@ -1,0 +1,411 @@
+@import "./variables";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.margin{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .container {
+        max-width: 1600px;
+        width: 100%;
+        display: flex;
+        .navigation {
+            min-width: 250px;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+    
+            .logo {
+                display: flex;
+                border-bottom: 1px solid $mainBgcolor;
+                padding-bottom: 24px;
+            }
+            .text {
+                margin-left: 12px;
+                display: flex;
+                flex-direction: column;
+                color: #4318FF;
+                .venus {
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+                .dashboard {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+            .button.-active{
+                background-color: #4318FF;
+                border-radius: 5px;
+            }
+            .button {
+                margin-top: 40px;
+                display: flex;
+                color: $secondText;
+                width: 230px;
+                height: 45px;
+    
+                .sumbol {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                }
+    
+                .name {
+                    margin-left: 16px;
+                    text-align: center;
+                    line-height: 45px;
+                }
+            }
+            .log_out {
+                position: absolute;
+                bottom: 50px;
+                left: 10px;
+                display: flex;
+                color: $secondText;
+            }
+        }
+    
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: $mainBgcolor;
+    
+            .user_name {
+                color: #707EAE;
+                font-size: 14px;
+                font-weight: 700;
+                margin: 10px;
+            }
+    
+            .header {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 10px 0px;
+    
+                .welcome{
+                @include h1_font(#2B3674);
+                }
+    
+                .search {
+                    display: flex;
+                    color: #8F9BBA;
+                    background-color: #fff;
+                    width: 341px;
+                    height: 46px;
+                    border-radius: 10px;
+                    align-items: center;
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 46px;
+                    }
+                }
+                
+            }
+    
+            .first_line {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 20px;
+    
+                .type1 {
+                    width: 259px;
+                    height: 97px;
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 10px;
+
+    
+                    .amount {
+                        display: flex;
+                        flex-direction: column;
+                    }
+    
+                    .text {
+                        @include grayFont();
+                    }
+    
+                    .numb {
+                        @include h2_font ($mainText);
+                    }
+                }
+    
+                .type2 {
+                    width: 257px;
+                    height: 97px;
+                    padding-left: 17px;
+                    display: flex;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    margin: 10px;
+                    .earnings{
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 18px;
+    
+                        .text {
+                            @include grayFont();
+                        }
+        
+                        .numb {
+                            @include h2_font ($mainText);
+                        }
+                    }
+                }
+    
+                .type3 {
+                    width: 257px;
+                    height: 97px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    margin: 10px;
+                    .clients{
+                        display: flex;
+                        flex-direction: column;
+                        .text {
+                            @include grayFont();
+                        }
+        
+                        .numb {
+                            @include h2_font ($mainText);
+                        }
+                    }
+                }
+    
+                .type1.-active {
+                    width: 257px;
+                    background: linear-gradient(135deg, #868CFF 0%, #4318FF 100%);
+                    .text {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #E9EDF7;
+                    }
+    
+                    .numb {
+                        @include h2_font (#fff);
+                    }
+                }
+            }
+    
+            .second_line {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                padding: 20px 0px;
+    
+                .about_fin_goals {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    width: 720px;
+                    height: 345px;
+                    margin: 10px;
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        .h2 {
+                            @include h1_font ($mainText);
+                        }
+                        .description {
+                            font-size: 16px;
+                            color: $secondText;
+                            margin: 15px 0px;
+                        }
+                        .cta {
+                            @include blue_buttons();
+                            width: 168px;
+                        }
+                    }
+                }
+    
+                .security {
+                    @include square_block (flex-start);
+                    margin: 10px;
+    
+                    .h2 {
+                        @include h2_font ($mainText);
+                        margin: 24px 0px 7px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $secondText;
+                        margin-bottom: 20px;
+                    }
+                    .cta {
+                        width: 291px;
+                        @include blue_buttons();
+                    }
+                }
+            }
+    
+            .third_line {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .block1 {
+                    @include square_block (center);
+                    justify-content: center;
+                    margin: 10px;
+                    .icon {
+                        align-self: flex-end;
+                    }
+    
+                    .text {
+                        @include grayFont();
+                    }
+    
+                    .amount {
+                        @include h1_font($mainText);
+                        margin: 3px 0px 15px
+                    }
+    
+                    .percent {
+                        margin-bottom: 40px;
+                        @include Amount(#05CD99, rgba(5, 205, 153, 0.1));
+                    }
+                }
+    
+                .block2 {
+                    @include square_block (none);
+                    justify-content: space-between;
+                    margin: 10px;
+    
+                    .descrption {
+                        @include h2_font ($mainText);
+                        font-size: 20px;
+                    }
+    
+                    .transfers{
+                        display: flex;
+                        flex-direction: column;
+    
+                        .card {
+                            margin-bottom: 25px;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .info {
+                                display: flex;
+                                align-items: center;
+
+                                .ava {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-content: center;
+                                    margin-right: 14px;
+                                }
+    
+                                .about {
+                                    display: flex;
+                                    flex-direction: column;
+    
+                                    .when {
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        color: $secondText;
+                                    }
+                                }
+                            }
+    
+                            .money {
+                                @include Amount(#05CD99, rgba(5, 205, 153, 0.1));
+                            }
+                            .money.-red {
+                                @include Amount(#EE5D50, rgba(238, 93, 80, 0.1));
+                            }
+                        }
+                    }
+                    .view_all {
+                        display: flex;
+                        align-self: flex-end;
+                        
+                        .text {
+                        color: #4318FF;
+                        font-size: 16px;
+                        font-weight: 700px;
+                        margin-right: 7px;
+                        }
+                    }
+                }
+    
+                .block3 {
+                    @include square_block(center);
+                    justify-content: center;
+                    margin: 10px;
+    
+                    .avatar {
+                        background-color: $mainBgcolor;
+                        border-radius: 50%;
+                    }
+    
+                    .prof_info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .name {
+                            @include h1_font($mainText);
+                            margin-top: 20px;
+                        }
+
+                        .icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .location {
+                            display: flex;
+                            color: $secondText;
+                            margin-bottom: 35px;
+                        }
+                    }
+    
+                    .stat {
+                        display: flex;
+    
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin: 0px 20px;
+
+                            .word{
+                                font-size: 12px;
+                                font-weight: 400;
+                                color: $secondText;
+                            }
+
+                            .numb {
+                                @include h2_font ($mainText);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
